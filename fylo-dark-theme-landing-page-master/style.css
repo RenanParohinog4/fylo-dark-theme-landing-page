@@ -1,0 +1,382 @@
+/*Must import font family*/
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --intro-email-signup-bg: hsl(217, 28%, 15%);
+    --main-bg: hsl(218, 28%, 13%);
+    --footer-bg:hsl(216, 53%, 9%);
+    --testemonial-bg: hsl(219, 30%, 18%);
+    --neutral: hsl(0, 0%, 100%);
+}
+ul,
+li{
+    list-style: none;
+}
+a{
+    color: var(--neutral);
+    text-decoration: none;
+}
+main{
+    position: relative;
+}
+/*header*/
+header{
+    background: var(--intro-email-signup-bg);
+    padding: 73px 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-items{
+    display: flex;
+}
+.nav-items li:not(:last-child){
+    margin-right: 56px;
+}
+
+/*hero-section*/
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--intro-email-signup-bg) url(./images/bg-curvy-desktop.svg) bottom no-repeat;
+    background-size: 100% 250px;
+    height: 100vh;
+
+}
+.hero :not(:last-child){
+    margin-bottom: 30px;
+}
+.hero img{
+    width: 533px;
+}
+.hero p{
+    width: 460px;
+    color: var(--neutral);
+}
+.hero h2{
+    font-size: 40px;
+    color: var(--neutral);
+}
+.cta{
+    width: 280px;
+    padding: 20px 0px;
+    color: var(--neutral);
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    
+}
+/*features*/
+.features{
+   padding: 100px 288px;
+    height: 100vh;
+    display: grid;
+    color: var(--neutral);
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--main-bg);
+    gap:94px 150px;
+
+}
+
+.feature{
+    text-align: center;
+}
+.feature :not(:last-child){
+    padding-bottom: 20px;
+}
+
+/*Second features or additional features*/
+.second-features{
+    background-color: var(--main-bg);
+    color: var(--neutral);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding:100px;
+}
+
+.second-features-img{
+    margin-right: 40px;
+}
+.second-features-text :not(:last-child){
+    margin-bottom: 20px;
+}
+.second-features-text h2{
+    font-size: 40px;
+}
+.second-features-text a{
+    color: hsl(198, 60%, 50%);
+    padding-bottom: 2px;
+    border-bottom: 1px solid hsl(198, 60%, 50%);
+}
+
+/*Testemonil*/
+.testemonial{
+    display: flex;
+
+    height: 70vh;
+    background-color: var(--main-bg);
+    color: var(--neutral);
+
+    padding: 0px 100px;
+    
+    position: relative;
+}
+.qoutes{
+    position: absolute;
+    top: -35px;
+    
+}
+.box{
+    height: 40vh;
+    background-color: var(--testemonial-bg);
+    margin: 0px 20px;
+    padding: 50px;
+    border-radius: 5px;
+}
+.user-info{
+    display: flex;
+    margin-top: 40px;
+}
+.user-info img{
+    max-width: 15%;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+/*Sign Up*/
+.sign-up{
+    background-color:var(--intro-email-signup-bg);
+    color: var(--neutral);
+
+    border:none;
+    border-radius: 5px;
+    padding: 40px 73px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -110px;
+}
+.sign-up-styles{
+    text-align: center;
+}
+.sign-up-styles h2{
+    font-size: 2rem;
+}
+.sign-up-styles :not(:last-child){
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+}
+input[type = "email"]{
+    border-radius: 50px;
+
+    width: 420px;
+    height: 50px;
+    margin-right: 15px;
+}
+input{
+    text-align: center;
+    outline: coral;
+}
+.cta-two{
+    width: 210px;
+    height: 50px;
+    color: var(--neutral);
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%))
+}
+
+
+/*Footer styles*/
+footer{
+    background-color: var(--footer-bg);
+    height: 80vh;
+    color: var(--neutral);
+  
+    padding: 200px 80px 150px;
+   
+    display: grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo . . . "
+    "location email nav-one nav-two";
+    grid-column-gap:70px;
+}
+
+.footer-logo{
+    grid-area: logo;
+    margin-bottom: 20px;
+}
+.location-info{
+    grid-area: location;
+    display: grid;
+    grid-template-columns: 5% 80%;
+}
+.location-info  span{
+    padding-left: 24px;
+}
+/*email*/
+.email-info{
+    grid-area: email;
+}
+.email-info span{
+    padding-left: 20px;
+}
+.email-info > div{
+    margin-bottom: 20px;
+}
+/*navlinks*/
+.nav-links{
+    grid-area: nav-one;
+}
+.nav-links li{
+    margin-bottom: 20px;
+}
+/*.nav-contact*/
+.nav-contact{
+    grid-area: nav-two;
+}
+.nav-contact li{
+    margin-bottom: 20px;
+}
+
+/*mobile style 375px*/
+@media all and (max-width: 375px){
+    main{
+        background-color: var(--main-bg);
+    }
+    header{
+        background: var(--intro-email-signup-bg);
+        padding: 20px;
+    }
+    .header-logo{
+        max-width: 60%;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+    }
+    .nav-items li:not(:last-child){
+        margin-right: 10px;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        background: var(--intro-email-signup-bg) url(./images/bg-curvy-mobile.svg) bottom no-repeat;
+        padding: 0 10px 0;
+    }
+    .hero > *{
+        max-width: 100%;
+    }
+    .features {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding: 0 20px 20px;
+    }
+    .features > *{
+        max-width: 100%;
+    }
+
+    .second-features{
+        display: flex;
+        flex-direction: column;
+        padding: 500px 20px 100px;
+        
+    }
+    
+    .second-features > *{
+        max-width: 100%;
+    }
+
+    
+    .testemonial{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 200px 0;
+        margin: 0;
+        
+      
+      
+    }
+    .testemonial > *{
+        max-width: 100%;
+   
+    }
+
+    .box {
+        margin: 0 20px 20px;
+        padding: 30px;
+    }
+    .special{
+        margin-bottom: 200px;
+    }
+
+    .sign-up {
+        max-width: 90%;
+    }
+    .sign-up{
+        padding: 20px;
+        position: relative;
+        bottom: -120px;
+    }
+
+    input[type = "email"]{
+        border-radius: 50px;
+        
+        width: 100%;
+        height: 50px;
+        margin-right: 15px;
+    }
+    .cta-two{
+        width:100%;
+        height: 50px;
+        color: var(--neutral);
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%))
+    }    
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .location-info{
+        padding-bottom: 10px;
+    }
+    .email-info span{
+        padding-left: 10px;
+    }
+    footer{
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        padding: 200px 30px 100px 30px;
+    }
+    .footer-logo{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding-bottom: 10px;
+    }
+    .nav-links {
+        padding: 50px 0;
+    }
+}
